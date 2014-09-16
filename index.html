@@ -19,9 +19,11 @@
         <div id="div-3">
 			<p>marc laville</p>
 			<h2>codeur</h2>
-			<p>à Saint-Lothain Jura (fr)</p>
+			<p id="p-localisation">à Saint-Lothain Jura (fr)</p>
 		</div>
-        <div id="div-4"></div>
+        <div id="div-4">
+			<div id="googleMap" class="transparent"></div>
+		</div>
     </div>
     <div>
         <div id="div-5">
@@ -32,7 +34,7 @@
 				<li class="list-group-item">JavaScript</li>
 				<li class="list-group-item">php</li>
 				<li class="list-group-item">RegEx</li>
-				<li class="list-group-item">MySQL</li>
+				<li class="list-group-item">SQL</li>
 			</ul>
 			</div>
         </div>
@@ -78,16 +80,16 @@
 						<div>Développement d'un outil Web de partage de données. Module Ged - Interface Web.
 					<em>Php/Mysql, JavaScript, ExtJS</em></div>
 					</li>
+					<li  class="blocReponse" id="li-mt">
+						<img src="img/logo-monts-terroirs.png" />
+						<div>Exploitation Transport.<br />Saisie des Ordres et Editions des Feuilles de Route</div>
+					</li>
 					<li class="blocReponse" id="li-pbqd">
 						<img src="./img/logo-pierre-bouquerod.png" />
 						<div>Gestion de flotte.<br />
 							Collecte des données kilomètriques et temps de travail.<br />Intégration des Données de l'Informatique Embarquée.
 							<em>Php/Mysql, JavaScript, SOAP.</em>
 						</div>
-					</li>
-					<li  class="blocReponse" id="li-mt">
-						<img src="img/logo-monts-terroirs.png" />
-						<div>Exploitation Transport.<br />Saisie des Ordres et Editions des Feuilles de Route</div>
 					</li>
 					<li class="blocReponse">
 						<div id="clouder"></div>
@@ -147,20 +149,19 @@
     </div>
     <div></div>
 </div>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
 	<script type="text/javascript" src="./js/cloud.js"></script>
 	<script type="text/javascript" src="./js/mondrian.js"></script>
 	<script type="text/javascript" src="./js/envoiMsg.js"></script>
-	<script>
-		!function(d,s,id){
-			var js,
-				fjs=d.getElementsByTagName(s)[0],
-				p=/^http:/.test(d.location)?'http':'https';
-			if(!d.getElementById(id)){
-				js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-				fjs.parentNode.insertBefore(js,fjs);
-			}
-		}(document, 'script', 'twitter-wjs');
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-43062436-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
 	</script>
-
 </body>
 </html>
