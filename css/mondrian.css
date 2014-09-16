@@ -242,7 +242,7 @@ width:38em;
 .blocReponse {
 	list-style: none;
 	display: inline-block;
-	width: 1px;
+	width: 0px;
 	height: 8em;
 	overflow: hidden;
 	transition-property: width;
@@ -309,4 +309,20 @@ width: 96%em;
     background-color: #e6e6e6;
     border-color: #adadad;
     color: #333;
+}
+
+#googleMap {
+	transition-property: opacity;
+	transition-duration: 1.s;
+    width: 14.75em;
+	height:9em;
+}
+
+.transparent {
+	opacity: 0;
+}
+
+
+#p-localisation {
+	cursor: pointer;
 }
