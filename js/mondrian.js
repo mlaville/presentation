@@ -20,7 +20,7 @@ function initMap() {
 	var myCenter=new google.maps.LatLng(46.8252,5.6446),
 		mapProp = {
 		  center: myCenter,
-		  zoom:12,
+		  zoom:5,
 		  mapTypeId:google.maps.MapTypeId.ROADMAP
 		},
 		map = new google.maps.Map( document.getElementById("googleMap"), mapProp ),
@@ -35,30 +35,7 @@ window.addEventListener('load', function() {
 
 var p_localisation = document.getElementById('p-localisation'),
 	styleMap = document.getElementById('googleMap').classList;
-/*	var cases = document.querySelectorAll('#div-11 div'),
-		divClouder = document.getElementById('clouder');
-	
-	for(var i = cases.length ; i > 0 ; i--) {
-	
-		var zone = cases[i-1];
-		
-		zone.dataset.num = i;
-		zone.addEventListener('click', function() {
-			var divRootCL = document.getElementById('div-root').classList;
-			
-			divRootCL.toggle('zoom');
-//			if(divRootCL.length) {
-			if(!divRootCL.contains('zoom')) {
-				divRootCL.remove( divRootCL.toString() );
-				divClouder.style.display = 'block';
-			} else {
-				divRootCL.add( 'zoom' + this.dataset.num );
-				divClouder.style.display = 'none';
-			}
-			return;
-		});
-	}
-	*/
+
 	window.clouder = new Clouder({
         container: clouder,
 		callback: function() { return; },
