@@ -131,37 +131,6 @@ figure{
 	margin:-2em -3em;
 }
 
-/*
-.zoom  #div-11 figcaption {
-	display:block;
-	top:-2.em;
-}
-
-.zoom figure img{
-    width: 1em;
-}
-
-.zoom2 figure img{
-}
-.zoom a div img{
-	transform: scale(.3, .3) translate(-1.4em, -1.4em);
-}
-.zoom3{
-	transform: scale(8, 8) translate(220px, -220px);
-}
-.zoom4{
-	transform: scale(8, 8) translate(140px, -220px);
-}
-.zoom5{
-	transform: scale(8, 8) translate(80px, -220px);
-}
-.zoom6{
-	transform: scale(8, 8) translate(0px, -220px);
-}
-.zoom7{
-	transform: scale(8, 8) translate(-80px, -220px);
-}
-*/
 ul, li {
 	list-style-type: none;
 	margin: 0;
@@ -258,9 +227,12 @@ width:38em;
 .blocReponse:target { 
 /*	background-color: transparent; */
 	background-color: #ddd; 
-	color: #999;
+	color: #333;
 	width: 32em;
 	z-index:10;
+/*  background: #91877b; */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
 }
 .blocReponse img {
 	float: left;

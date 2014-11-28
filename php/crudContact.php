@@ -34,7 +34,7 @@ function mailHtml($destinataire, $expediteur, $sujet, $message) {
 //     $headers .= 'Bcc: anniversaire_verif@example.com' . "\r\n";
 	
 	// Envoi
-	return mail($destinataire, $sujet, "Commentaire laissé sur accueil www.polinux.fr<br>\n" . $message, $entete) ;
+	return @mail($destinataire, $sujet, "Commentaire laissé sur le site<br>\n" . $message, $entete) ;
 }
 
 	$response["success"] = isset($_POST["cmd"]);
@@ -42,7 +42,7 @@ function mailHtml($destinataire, $expediteur, $sujet, $message) {
 	
 		$cmd = $_REQUEST["cmd"];
 
-		$reqInsertCct = "INSERT INTO t_polinux_pct ( cct_mail, cct_message, cct_ip, cct_date )"
+		$reqInsertCct = "INSERT INTO $nomTable ( cct_mail, cct_message, cct_ip, cct_date )"
 				. " VALUES ( ?, ?, ?, NOW( ) )";
 		
 		// load or save?
@@ -62,8 +62,8 @@ function mailHtml($destinataire, $expediteur, $sujet, $message) {
 					$response["error"] = array( "reason"=>$err[2] );
 				}
 				
-//				mailHtml('marc.laville@polinux.net', $_POST["mail"], 'web contact', $_POST["msg"]);
-				mailHtml('vava.laville@voila.fr', $_POST["mail"], 'web contact', $_POST["msg"]);
+//				mailHtml('therese.laville@voila.fr', $_POST["mail"], 'galerie', $_POST["msg"]);
+				mailHtml('vava.laville@voila.fr', $_POST["mail"], 'galerie', $_POST["msg"]);
 				
 			break;
 			

@@ -16,5 +16,7 @@ $loginServeur = 'localhost';
 $loginUsername = 'root';
 $loginPassword = '';
 $nomBase = 'contact';
+$nomTable = 't_polinux_pct';
+$mailAdress = 'vava.laville@polinux.net';
 
 ?>
