@@ -34,9 +34,13 @@ div {
 	text-align:center;
 }
 #div-2 img{
-width: 4em;
-opacity:.8;
+	width: 4em;
+	opacity:.8;
 }
+#div-ip{
+	font-size:.2em;
+}
+
 #div-3 {
     background-color: rgb(230, 230, 230);
     width: 6em;

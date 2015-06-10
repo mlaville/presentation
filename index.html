@@ -15,6 +15,7 @@
     <div id="div-root-nord">
         <div id="div-1">
             <div id="div-2"><img alt="ml" src="./img/trombine.png"></div>
+            <div id="div-ip"></div>
         </div>
         <div id="div-3">
 			<p>marc laville</p>
@@ -160,6 +161,23 @@
 	<script type="text/javascript" src="./js/cloud.js"></script>
 	<script type="text/javascript" src="./js/mondrian.js"></script>
 	<script type="text/javascript" src="./js/envoiMsg.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+	<script type="text/javascript">
+	  function getIP(json) {
+		var log = new Firebase("https://px-flux.firebaseio.com/logs/polinux-fr"),
+			d = new Date();
+		
+			log.push({
+			  date: d.toString(),
+			  ip: json.ip,
+			  userAgent: navigator.userAgent
+			});
+			
+			return document.getElementById('div-ip').textContent = json.ip;
+	  }
+	</script>
+
+	<script type="text/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-43062436-1']);
