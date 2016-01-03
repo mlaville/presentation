@@ -7,7 +7,9 @@
  * @version    0.1
  * @revision   $0$
  *
- * - Gere la saisie des message depuis la galerie
+ * @date revision   03/01/2016 Utilisation du service ./services/contact
+ *
+ *  Gestion des messages de contact à partir de polinux.fr
  *
  * Licensed under the GPL license:
  *   http://www.opensource.org/licenses/mit-license.php
@@ -39,9 +41,9 @@ function makeRequest( unMail, unMsg ) {
 		return false;
 	}
 	httpRequest.onreadystatechange = alertContents;
-	httpRequest.open('POST', './php/crudContact.php', true);
+	httpRequest.open('POST', './services/contact', true);
     httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    httpRequest.send( 'cmd=create&mail=' + encodeURIComponent(unMail) + '&msg='  + encodeURIComponent(unMsg) );
+    httpRequest.send( 'mail=' + encodeURIComponent(unMail) + '&msg='  + encodeURIComponent(unMsg) );
 
 	return;
 }
