@@ -9,12 +9,43 @@ div {
     border-width:.4em;
     border-style:none;
 }
+
+#clouder {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+#bg {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  right: 5%;
+}
+
+#bg {
+	z-index: 20;
+}
+
+/*
+#clouder {
+    width: 26em;
+	height: 5em;
+    left: 12em;
+    margin-left: 12em;
+    margin-top: 6em;
+    position: absolute;
+    top: 16em;
+}
+*/
+
 #div-root {
-	margin:1em 10%;
-	padding-top:2em;
-	height: 21.8em;
+	margin: 1em 10%;
+	padding-top: 2em;
+	height: 22.8em;
 	overflow:hidden;
-	-webkit-transition: -webkit-transform 2s;
 	transition: transform 2s;
 }
 
@@ -59,14 +90,14 @@ div {
 #div-6 {
     background-color: rgb(230, 230, 230);
     width: 6em;
-    height: 12.4em;
+    height: 13.4em;
     border-style: solid solid none none;
-    float:left;
+    float: left;
 }
 #div-7 {
     background-color: rgb(230, 230, 230);
     width: 21.4em;
-    height: 12.4em;
+    height: 13.4em;
     border-top-style: solid;
     float:left;
 }
@@ -77,6 +108,11 @@ div {
     border-style: none none solid none;
     float:left;
 }
+#div-8 img {
+	float: left;
+	width: 4em;
+}
+
 #div-9, #div-12 {
     width: 100%;
     height: 2.5em;
@@ -91,8 +127,8 @@ div {
     border-right-style: solid;
 }
 #div-12 {
-      border-top-style: solid;
-  
+	border-top-style: solid;
+	border-bottom-style: none;
 }
 #div-10 ~ div, #div-11 div {
     height: 2.5em;
@@ -200,16 +236,6 @@ width:38em;
 
 .hidden {
 	display: none;
-}
-
-#clouder {
-    width: 26em;
-	height: 5em;
-    left: 12em;
-    margin-left: 12em;
-    margin-top: 6em;
-    position: absolute;
-    top: 16em;
 }
 
 .blocReponse {
